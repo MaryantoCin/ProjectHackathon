@@ -24,6 +24,9 @@ class CreateTeamsTable extends Migration
             $table->string('payment_image');
             $table->boolean('payment_status');
             $table->timestamps();
+            $table->foreign('member_id1')->references('id')->on('members')->onDelete('cascade');
+            $table->foreign('member_id2')->references('id')->on('members')->onDelete('cascade');
+            $table->foreign('member_id3')->references('id')->on('members')->onDelete('cascade');
         });
     }
 
