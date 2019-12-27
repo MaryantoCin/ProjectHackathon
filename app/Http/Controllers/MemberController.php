@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Member;
 use Illuminate\Http\Request;
+use App\Member;
+use App\Team;
 
 class MemberController extends Controller
 {
@@ -14,7 +15,8 @@ class MemberController extends Controller
      */
     public function index()
     {
-        //
+        $members = Member::with('team')->get();
+        return view('member',compact('members'));
     }
 
     /**
@@ -24,7 +26,8 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
+        $teams = Team::all();
+        return view('create',compact('teams'));
     }
 
     /**
@@ -35,7 +38,8 @@ class MemberController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Member::create($request->all());
+        return redirect('/home');
     }
 
     /**
