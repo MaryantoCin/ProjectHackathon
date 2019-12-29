@@ -8,33 +8,70 @@
 </head>
 <body>
 <form action="{{url('create')}}" method="POST">
-    @csrf
-    <label>Is Leader?</label>
-    <input type="checkbox" name="isLeader" id="isLeader">
-    <label>Nama</label>
-    <input type="text" name="name"/>
-    {{$errors->first('name')}}
-    <label>Address</label>
-    <input type="text" name="address"/>
-    {{$errors->first('address')}}
-    <label>Email</label>
-    <input type="text" name="email"/>
-    {{$errors->first('email')}}
-    <label>Number</label>
-    <input type="text" name="number"/>
-    {{$errors->first('number')}}
-    <label>Birthplace</label>
-    <input type="text" name="birth_place"/>
-    {{$errors->first('birth_place')}}
-    <label>Birthdate</label>
-    <input type="date" name="birth_date" id="birth_date">
-    {{$errors->first('birth_date')}}
-    <label>Line ID</label>
-    <input type="text" name="line_id"/>
-    {{$errors->first('line_id')}}
-    <label>Github ID</label>
-    <input type="text" name="github_id"/>
-    {{$errors->first('github_id')}}
-</form>
+        <input type="text" class="input-text" placeholder="Group Name">
+        <input type="password" class="input-text" placeholder="Password">
+        <input type="password" class="input-text" placeholder="Repeat Password">
+      </form> -->
+      <div class="modal-title">LEADER</div>
+      <form action="">
+        <input type="text" class="input-text" placeholder="Full Name">
+        <input type="text" class="input-text" placeholder="Address">
+        <input type="text" class="input-text" placeholder="Birth Place/Date">
+        <input type="text" class="input-text" placeholder="Email">
+        <input type="text" class="input-text" placeholder="Whatsapp Number">
+        <input type="text" class="input-text" placeholder="Line ID">
+        <input type="text" class="input-text" placeholder="GitHub ID">
+        <input type="file" id="file">
+        <label for="file" class="input-text">
+          Upload CV
+          <i class="fas fa-file-upload"></i>
+        </label>
+        <input type="file" id="file">
+        <label for="file" class="input-text">
+          Upload Project
+          <i class="fas fa-file-upload"></i>
+        </label>
+      </form>
+      <div class="modal-title">MEMBER 1</div>
+      <form action="">
+        <input type="text" class="input-text" placeholder="Full Name">
+        <input type="text" class="input-text" placeholder="Address">
+        <input type="text" class="input-text" placeholder="Birth Place/Date">
+        <input type="text" class="input-text" placeholder="Email">
+        <input type="text" class="input-text" placeholder="Whatsapp Number">
+        <input type="text" class="input-text" placeholder="Line ID">
+        <input type="text" class="input-text" placeholder="GitHub ID">
+        <input type="file" id="file">
+        <label for="file" class="input-text">
+          Upload CV
+          <i class="fas fa-file-upload"></i>
+        </label>
+        <input type="file" id="file">
+        <label for="file" class="input-text">
+          Upload Project
+          <i class="fas fa-file-upload"></i>
+        </label>
+      </form>
+      <div class="modal-title">MEMBER 2</div>
+      <form action="">
+        <input type="text" class="input-text" placeholder="Full Name">
+        <input type="text" class="input-text" placeholder="Address">
+        <input type="text" class="input-text" placeholder="Birth Place/Date">
+        <input type="text" class="input-text" placeholder="Email">
+        <input type="text" class="input-text" placeholder="Whatsapp Number">
+        <input type="text" class="input-text" placeholder="Line ID">
+        <input type="text" class="input-text" placeholder="GitHub ID">
+        <input type="file" id="file">
+        <label for="file" class="input-text">
+          Upload CV
+          <i class="fas fa-file-upload"></i>
+        </label>
+        <input type="file" id="file">
+        <label for="file" class="input-text">
+          Upload Project
+          <i class="fas fa-file-upload"></i>
+        </label>
+        <button class="form-button" type="submit">Register</button>
+      </form>
 </body>
 </html>
