@@ -32,10 +32,15 @@
                     </a>
                 </li>
                 <li>
-                    <a class="menu-item" href="../../landingpage/index.html">
-                        <div class="menu-icon logout"></div>
-                        <div class="menu-text">Logout</div>
-                    </a>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                 </li>
             </ul>
             <div class="timeline-dashboard">
