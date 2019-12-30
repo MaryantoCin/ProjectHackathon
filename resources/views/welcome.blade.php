@@ -102,6 +102,7 @@
       <div class="modal-title">TEAM</div>
       <form method="POST" action="{{ route('register') }}">
        @csrf
+       <label>Name</label>
        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')

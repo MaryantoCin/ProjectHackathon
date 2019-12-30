@@ -25,9 +25,10 @@
                     </a>
                 </li>
                 <li>
-                <a class="dropdown-item" href="{{ route('logout') }}"
+                <a class="menu-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
+                                        <div class="menu-icon logout"></div>
                                         {{ __('Logout') }}
                                     </a>
 
