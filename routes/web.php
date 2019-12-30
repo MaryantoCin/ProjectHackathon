@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/','PageController@profile');
+Route::get('/','PageController@profile')->name('landingpage');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/create','MemberController@create');
-Route::post('/create','MemberController@store');
+Route::get('/create','TeamController@create',function(){
+    //
+})->middleware('auth');
+Route::post('/home','TeamController@store');
 Route::get('/member','MemberController@index');

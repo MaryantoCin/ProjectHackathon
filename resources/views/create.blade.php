@@ -7,66 +7,58 @@
     <title>Document</title>
 </head>
 <body>
-<form action="{{url('create')}}" method="POST">
-        <input type="text" class="input-text" placeholder="Group Name">
-        <input type="password" class="input-text" placeholder="Password">
-        <input type="password" class="input-text" placeholder="Repeat Password">
-      </form> -->
       <div class="modal-title">LEADER</div>
-      <form action="">
-        <input type="text" class="input-text" placeholder="Full Name">
-        <input type="text" class="input-text" placeholder="Address">
-        <input type="text" class="input-text" placeholder="Birth Place/Date">
-        <input type="text" class="input-text" placeholder="Email">
-        <input type="text" class="input-text" placeholder="Whatsapp Number">
-        <input type="text" class="input-text" placeholder="Line ID">
-        <input type="text" class="input-text" placeholder="GitHub ID">
-        <input type="file" id="file">
+      <form action="{{url('home')}}" method="POST">
+      @csrf
+        <input type="text" class="input-text" placeholder="Full Name" name="leaderName">
+        <input type="text" class="input-text" placeholder="Address" name="leaderAddress">
+        <input type="text" class="input-text" placeholder="Birth Place/Date" name="leaderBirth">
+        <input type="text" class="input-text" placeholder="Email" name="leaderEmail">
+        <input type="text" class="input-text" placeholder="Whatsapp Number" name="leaderNumber">
+        <input type="text" class="input-text" placeholder="Line ID" name="leaderLine">
+        <input type="text" class="input-text" placeholder="GitHub ID" name="leaderGithub">
+        <input type="file" id="file" name="leaderCV">
         <label for="file" class="input-text">
           Upload CV
           <i class="fas fa-file-upload"></i>
         </label>
-        <input type="file" id="file">
+        <input type="file" id="file" name="leaderProject">
         <label for="file" class="input-text">
           Upload Project
           <i class="fas fa-file-upload"></i>
         </label>
-      </form>
       <div class="modal-title">MEMBER 1</div>
-      <form action="">
-        <input type="text" class="input-text" placeholder="Full Name">
-        <input type="text" class="input-text" placeholder="Address">
-        <input type="text" class="input-text" placeholder="Birth Place/Date">
-        <input type="text" class="input-text" placeholder="Email">
-        <input type="text" class="input-text" placeholder="Whatsapp Number">
-        <input type="text" class="input-text" placeholder="Line ID">
-        <input type="text" class="input-text" placeholder="GitHub ID">
-        <input type="file" id="file">
+        <input type="text" class="input-text" placeholder="Full Name" name="member1Name">
+        <input type="text" class="input-text" placeholder="Address" name="member1Address">
+        <input type="text" class="input-text" placeholder="Birth Place/Date" name="member1Birth">
+        <input type="text" class="input-text" placeholder="Email" name="member1Email">
+        <input type="text" class="input-text" placeholder="Whatsapp Number" name="member1Number">
+        <input type="text" class="input-text" placeholder="Line ID" name="member1Line">
+        <input type="text" class="input-text" placeholder="GitHub ID" name="member1Github">
+        <input type="file" id="file" name="member1CV">
         <label for="file" class="input-text">
           Upload CV
           <i class="fas fa-file-upload"></i>
         </label>
-        <input type="file" id="file">
+        <input type="file" id="file" name="member1Project">
         <label for="file" class="input-text">
           Upload Project
           <i class="fas fa-file-upload"></i>
         </label>
-      </form>
       <div class="modal-title">MEMBER 2</div>
-      <form action="">
-        <input type="text" class="input-text" placeholder="Full Name">
-        <input type="text" class="input-text" placeholder="Address">
-        <input type="text" class="input-text" placeholder="Birth Place/Date">
-        <input type="text" class="input-text" placeholder="Email">
-        <input type="text" class="input-text" placeholder="Whatsapp Number">
-        <input type="text" class="input-text" placeholder="Line ID">
-        <input type="text" class="input-text" placeholder="GitHub ID">
-        <input type="file" id="file">
+        <input type="text" class="input-text" placeholder="Full Name" name="member2Name">
+        <input type="text" class="input-text" placeholder="Address" name="member2Address">
+        <input type="text" class="input-text" placeholder="Birth Place/Date" name="member2Birth">
+        <input type="text" class="input-text" placeholder="Email" name="member2Email">
+        <input type="text" class="input-text" placeholder="Whatsapp Number" name="member2Number">
+        <input type="text" class="input-text" placeholder="Line ID" name="member2Line">
+        <input type="text" class="input-text" placeholder="GitHub ID" name="member2Github">
+        <input type="file" id="file" name="member2CV">
         <label for="file" class="input-text">
           Upload CV
           <i class="fas fa-file-upload"></i>
         </label>
-        <input type="file" id="file">
+        <input type="file" id="file" name="member2Project">
         <label for="file" class="input-text">
           Upload Project
           <i class="fas fa-file-upload"></i>
