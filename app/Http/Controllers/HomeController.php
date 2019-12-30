@@ -28,17 +28,19 @@ class HomeController extends Controller
     {   
         $user = Auth::user();
         // dd($user);
+        $username = $user->name;
         $userid = $user->id;
         //dd($userid);
         if ($userid == 1){
             $datas = Team::all();
+            $datausers = User::all();
             //dd($data);
-            return view('admin',compact('datas'));
+            return view('admin',compact('datas','datausers'));
         }
         else{
             $datas = Team::find($userid);
             //dd($data);
-            return view('home',compact('datas','userid'));
+            return view('home',compact('datas','userid','username'));
         }
         
     }
@@ -48,10 +50,11 @@ class HomeController extends Controller
         $user = Auth::user();
         // dd($user);
         $userid = $user->id;
+        $username = $user->name;
         //dd($userid);
         $datas = Team::find($userid);
         //dd($datas);
-        return view('payment',compact('datas','userid'));
+        return view('payment',compact('datas','userid','username'));
     }
 
     

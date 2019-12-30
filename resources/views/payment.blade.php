@@ -16,7 +16,7 @@
             </a>
             <div class="welcome-container">
                 <div class="welcome-text">Welcome,</div>
-                <div class="welcome-name">{{$userid}}</div>
+                <div class="welcome-name">Team {{$username}}</div>
             </div> <br>
             <ul class="menu">
                 <li>

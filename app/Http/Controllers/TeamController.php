@@ -122,7 +122,8 @@ class TeamController extends Controller
      */
     public function update(Request $request, Team $team)
     {
-        //
+        $team->update($request->all());
+        return redirect('/home');
     }
 
     /**

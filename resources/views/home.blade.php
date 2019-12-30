@@ -16,7 +16,7 @@
             </a>
             <div class="welcome-container">
                 <div class="welcome-text">Welcome,</div>
-                <div class="welcome-name">{{$userid}}</div>
+                <div class="welcome-name">Team {{$username}}</div>
             </div> <br>
             <ul class="menu">
                 <li>
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="content-container">
-            <h1 id="namatim">TEAM {{$userid}}</h1> <br>
+            <h1 id="namatim">TEAM {{$username}}</h1> <br>
             <div class="member">
                 <h2 id="member">Leader</h2>
                 <div class="leader">
@@ -118,17 +118,15 @@
                             <label for="file-input">
                             <img src="{{asset('asset/home/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
                             <input id="file-input" type="file">
-                        </div>
-                        <p id="drop2">You have uploaded your CV, last updated at: <br>
-                            2020-05-11 11:05:01. Check it <i id="hyperlink">here</i></p> <br>
+                    </div>
+                        
                         <h5 id="drop">Upload your project here</h5>
                         <div class="cv-line">
                             <label for="file-input">
                             <img src="{{asset('asset/home/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
                             <input id="file-input" type="file">
                         </div>
-                        <p id="drop2">You have uploaded your project, last updated at: <br>
-                            2020-05-11 11:05:01. Check it <i id="hyperlink">here</i></p>
+           
                         <div class="submitdata">
                             <button>Submit</button>
                         </div>
@@ -187,6 +185,7 @@
                         <div class="cv-line">
                             <label for="file-input">
                             <img src="{{asset('asset/home/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
+                            
                             <input id="file-input" type="file">
                         </div>
                         <p id="drop2">You have uploaded your CV, last updated at: <br>

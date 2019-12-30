@@ -18,4 +18,5 @@ Route::get('/create','TeamController@create',function(){
     //
 })->middleware('auth');
 Route::post('/home','TeamController@store');
+Route::put('/home/{team}','TeamController@update');
 Route::get('/payment','HomeController@payment');

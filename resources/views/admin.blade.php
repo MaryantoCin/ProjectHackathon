@@ -45,7 +45,7 @@
         <div class="content-container">
             @foreach($datas as $data)
             <div class="member">
-                <h1 id="namatim">{{$data->id}}</h1>
+                <h1 id="namatim">Team ID {{$data->id}}</h1>
                 <div class="leader">
                     <div class="biodata">
                         <h2 id="member">Leader</h2>
@@ -54,7 +54,37 @@
                                 <div class="subcontent-data">{{$data->leaderName}}</div>
                             </div>
                         </div>
-                        <h2 id="member">Member</h2>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->leaderAddress}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->leaderBirth}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->leaderEmail}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->leaderNumber}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->leaderLine}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->leaderGithub}}</div>
+                            </div>
+                        </div>
+                        <h2 id="member">Member 1</h2>
                         <div class="line-data">
                             <div class="content-data">
                                 <div class="subcontent-data">{{$data->member1Name}}</div>
@@ -62,7 +92,68 @@
                         </div>
                         <div class="line-data">
                             <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Address}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Birth}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Email}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Number}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Line}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Github}}</div>
+                            </div>
+                        </div>
+                        <h2 id="member">Member 2</h2>
+                        <div class="line-data">
+                            <div class="content-data">
                                 <div class="subcontent-data">{{$data->member2Name}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Address}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Birth}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Email}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Number}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Line}}</div>
+                            </div>
+                        </div>
+                        <div class="line-data">
+                            <div class="content-data">
+                                <div class="subcontent-data">{{$data->member1Github}}</div>
                             </div>
                         </div>
                     </div>

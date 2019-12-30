@@ -10,6 +10,7 @@
 <body>
 <div class="intro-section">
       <div class="modal-title">LEADER</div>
+      <h5>Please fill all information require before exiting the page (Uploading CV and Project is optional)</h5>
       <form action="{{url('home')}}" method="POST" enctype="multipart/form-data">
       @csrf
         <input type="text" class="form-control" placeholder="Full Name" name="leaderName">
