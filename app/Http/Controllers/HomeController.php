@@ -36,9 +36,9 @@ class HomeController extends Controller
             return view('admin',compact('datas'));
         }
         else{
-            $data = Team::all();
+            $datas = Team::find($userid);
             //dd($data);
-            return view('home',compact('data','userid'));
+            return view('home',compact('datas','userid'));
         }
         
     }

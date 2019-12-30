@@ -16,7 +16,7 @@
             </a>
             <div class="welcome-container">
                 <div class="welcome-text">Welcome,</div>
-                <div class="welcome-name">xxx team</div>
+                <div class="welcome-name">{{$userid}}</div>
             </div> <br>
             <ul class="menu">
                 <li>
@@ -71,43 +71,43 @@
                         <div class="line-data">
                             <div class="name-data">Name</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Carissa Christie</div>
+                                <div class="subcontent-data">{{$datas->leaderName}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Address</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Jln. Kebon Jeruk No. 12</div>
+                                <div class="subcontent-data">{{$datas->leaderAddress}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Birth Place/Date</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Makassar, 11 Mei 2001</div>
+                                <div class="subcontent-data">{{$datas->leaderBirth}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Email</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carissachristie@gmail.com</div>
+                                <div class="subcontent-data">{{$datas->leaderEmail}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">WhatsApp Number</div>
                             <div class="content-data">
-                                <div class="subcontent-data">081234567890</div>
+                                <div class="subcontent-data">{{$datas->leaderNumber}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Line ID</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carissachristie12</div>
+                                <div class="subcontent-data">{{$datas->leaderLine}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">GitHub ID</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carisschristie</div>
+                                <div class="subcontent-data">{{$datas->leaderGithub}}</div>
                             </div>
                         </div>
                     </div>
@@ -141,43 +141,43 @@
                         <div class="line-data">
                             <div class="name-data">Name</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Carissa Christie</div>
+                                <div class="subcontent-data">{{$datas->member1Name}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Address</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Jln. Kebon Jeruk No. 12</div>
+                                <div class="subcontent-data">{{$datas->member1Address}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Birth Place/Date</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Makassar, 11 Mei 2001</div>
+                                <div class="subcontent-data">{{$datas->member1Birth}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Email</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carissachristie@gmail.com</div>
+                                <div class="subcontent-data">{{$datas->member1Email}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">WhatsApp Number</div>
                             <div class="content-data">
-                                <div class="subcontent-data">081234567890</div>
+                                <div class="subcontent-data">{{$datas->member1Number}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Line ID</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carissachristie12</div>
+                                <div class="subcontent-data">{{$datas->member1Line}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">GitHub ID</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carisschristie</div>
+                                <div class="subcontent-data">{{$datas->member1Github}}</div>
                             </div>
                         </div>
                     </div>
@@ -211,43 +211,43 @@
                         <div class="line-data">
                             <div class="name-data">Name</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Carissa Christie</div>
+                                <div class="subcontent-data">{{$datas->member2Name}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Address</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Jln. Kebon Jeruk No. 12</div>
+                                <div class="subcontent-data">{{$datas->member2Address}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Birth Place/Date</div>
                             <div class="content-data">
-                                <div class="subcontent-data">Makassar, 11 Mei 2001</div>
+                                <div class="subcontent-data">{{$datas->member2Birth}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Email</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carissachristie@gmail.com</div>
+                                <div class="subcontent-data">{{$datas->member2Email}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">WhatsApp Number</div>
                             <div class="content-data">
-                                <div class="subcontent-data">081234567890</div>
+                                <div class="subcontent-data">{{$datas->member2Number}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">Line ID</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carissachristie12</div>
+                                <div class="subcontent-data">{{$datas->member2Line}}</div>
                             </div>
                         </div>
                         <div class="line-data">
                             <div class="name-data">GitHub ID</div>
                             <div class="content-data">
-                                <div class="subcontent-data">carisschristie</div>
+                                <div class="subcontent-data">{{$datas->member2Github}}</div>
                             </div>
                         </div>
                     </div>
