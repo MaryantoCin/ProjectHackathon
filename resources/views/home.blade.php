@@ -41,6 +41,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+                </a>
                 </li>
             </ul>
             <div class="timeline-dashboard">

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Team;
+use App\User;
 
 class TeamController extends Controller
 {
@@ -14,7 +16,8 @@ class TeamController extends Controller
      */
     public function index()
     {
-        //
+        $teams = Teams::with('user')->get();
+        return view('home',compact('teams'));
     }
 
     /**
@@ -24,7 +27,11 @@ class TeamController extends Controller
      */
     public function create()
     {
-        //
+        $user = Auth::user();
+        // dd($user);
+        $userid = $user->id;
+        // dd($userid);
+        return view('create');
     }
 
     /**
@@ -35,7 +42,8 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Team::create($request->all());
+        return redirect('/home');
     }
 
     /**
