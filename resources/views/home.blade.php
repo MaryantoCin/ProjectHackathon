@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div class="sidebar-container">
-            <a class="logo" href="index.html">
+            <a class="logo" href="/">
                 <img src="{{asset('asset/home/hackathon.png')}}" alt="logo">
             </a>
             <div class="welcome-container">
@@ -20,28 +20,27 @@
             </div> <br>
             <ul class="menu">
                 <li>
-                    <a class="menu-item active" href="#">
+                    <a class="menu-item" href="/home">
                         <div class="menu-icon home"></div>
                         <div class="menu-text">Home</div>
                     </a>
                 </li>
                 <li>
-                    <a class="menu-item" href="#">
+                    <a class="menu-item" href="/payment">
                         <div class="menu-icon payment"></div>
                         <div class="menu-text">Payment</div>
                     </a>
                 </li>
                 <li>
                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
                 </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
                 </li>
             </ul>
             <div class="timeline-dashboard">
@@ -63,7 +62,7 @@
             </div>
         </div>
         <div class="content-container">
-            <h1 id="namatim">TEAM PAVAROTTI</h1> <br>
+            <h1 id="namatim">TEAM {{$userid}}</h1> <br>
             <div class="member">
                 <h2 id="member">Leader</h2>
                 <div class="leader">

@@ -18,4 +18,4 @@ Route::get('/create','TeamController@create',function(){
     //
 })->middleware('auth');
 Route::post('/home','TeamController@store');
-Route::get('/member','MemberController@index');
+Route::get('/payment','HomeController@payment');
