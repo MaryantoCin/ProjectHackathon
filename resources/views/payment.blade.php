@@ -11,31 +11,36 @@
 <body>
     <div class="container">
         <div class="sidebar-container">
-            <a class="logo" href="index.html">
+            <a class="logo" href="/">
                 <img src="{{asset('asset/payment/hackathon.png')}}" alt="logo">
             </a>
             <div class="welcome-container">
                 <div class="welcome-text">Welcome,</div>
-                <div class="welcome-name">xxx team</div>
+                <div class="welcome-name">{{$userid}}</div>
             </div> <br>
             <ul class="menu">
                 <li>
-                    <a class="menu-item active" href="#">
+                    <a class="menu-item" href="/home">
                         <div class="menu-icon home"></div>
                         <div class="menu-text">Home</div>
                     </a>
                 </li>
                 <li>
-                    <a class="menu-item" href="#">
+                    <a class="menu-item" href="/payment">
                         <div class="menu-icon payment"></div>
                         <div class="menu-text">Payment</div>
                     </a>
                 </li>
                 <li>
-                    <a class="menu-item" href="#">
-                        <div class="menu-icon logout"></div>
-                        <div class="menu-text">Logout</div>
-                    </a>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
                 </li>
             </ul>
             <div class="copyright-container">

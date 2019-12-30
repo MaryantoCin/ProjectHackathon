@@ -25,12 +25,6 @@
                     </a>
                 </li>
                 <li>
-                    <a class="menu-item" href="#">
-                        <div class="menu-icon payment"></div>
-                        <div class="menu-text">Payment</div>
-                    </a>
-                </li>
-                <li>
                 <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -73,7 +67,7 @@
                     </div>
                     <div class="cv">
                         <h3 id="payment-status">Payment Status</h3>
-                        <img src="{{asset('asset/admin/Icon-013.png')}}" alt="" width="250px" height="250px" class="filecv">
+                        <img src="{{asset('asset/admin/Icon-13.png')}}" alt="" width="250px" height="250px" class="filecv">
                     </div>
                 </div>
             </div> <br>

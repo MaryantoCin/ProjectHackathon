@@ -43,5 +43,16 @@ class HomeController extends Controller
         
     }
 
+    public function payment()
+    {
+        $user = Auth::user();
+        // dd($user);
+        $userid = $user->id;
+        //dd($userid);
+        $datas = Team::find($userid);
+        //dd($datas);
+        return view('payment',compact('datas','userid'));
+    }
+
     
 }

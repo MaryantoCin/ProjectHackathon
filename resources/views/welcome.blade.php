@@ -21,12 +21,12 @@
   <header class="header">
     <div class="wrapper">
       <div class="menu-hamburger" id="burger">☰</div>
-      <a href="index.html" class="main-logo">
+      <a href="/" class="main-logo">
         <img src="{{asset('asset/welcome/hackathon.png')}}" alt="logo">
       </a>
       <ul class="nav" id="nav">
         <li class="nav-item active">
-          <a href="index.html">Home</a>
+          <a href="#">Home</a>
         </li>
         <li class="nav-item">
           <a href="#aboutus">About Us</a>
@@ -38,7 +38,7 @@
           <a href="#">Media Partners</a>
         </li>
         <li class="nav-item">
-          <a href="#">FAQ</a>
+          <a href="#why">FAQ</a>
         </li>
         <li class="nav-item">
           <a href="#contactus">Contact Us</a>
@@ -76,7 +76,7 @@
       </div>
 
       <div class="intro-illustration">
-        <a class="intro-icon" href="index.html">
+        <a class="intro-icon" href="/">
           <img src="{{asset('asset/welcome/hackathon.png')}}" alt="intro illustration" class="intro-logo">
         </a>
         <div class="intro-buttons">
