@@ -72,8 +72,7 @@ html, body {
 
 .intro-section {
   width: 100%;
-  height: calc(100vh - 50px);
-  background: url(intro-bg.png) center / cover no-repeat;
+  background: url(intro-bg.jpg) center / cover no-repeat;
 }
 
 .intro-section > .wrapper {
@@ -248,19 +247,24 @@ html, body {
 }
 
 .modal-title {
+  position: relative;
   color: #1f1a6d;
   font-size: 36px;
+  padding: 12px;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 32px;
 }
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 50%;
   outline: none;
   padding: 16px;
   border: 2px solid #1f1a6d;
   font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 16px;
   border-radius: 8px;
   transition: filter 0.3s;
@@ -275,6 +279,11 @@ input[type="file"] {
   font-family: 'muli', sans-serif;
 }
 
+.form-bar {
+  display:flex;
+  padding: 16px 32px;
+  justify-content: center;
+}
 
 .form-button {
   font-size: 18px;
@@ -286,6 +295,7 @@ input[type="file"] {
   border-radius: 8px;
   cursor: pointer;
   transition: filter .3s;
+  text-align: center;
 }
 
 .form-error {
