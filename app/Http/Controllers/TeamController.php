@@ -16,8 +16,7 @@ class TeamController extends Controller
      */
     public function index()
     {
-        $teams = Teams::with('user')->get();
-        return view('home',compact('teams'));
+        //
     }
 
     /**
@@ -134,6 +133,7 @@ class TeamController extends Controller
      */
     public function destroy(Team $team)
     {
-        //
+        $team->delete();
+        return redirect('/home');
     }
 }

@@ -57,5 +57,23 @@ class HomeController extends Controller
         return view('payment',compact('datas','userid','username'));
     }
 
+    public function edit()
+    {
+        $user = Auth::user();
+        // dd($user);
+        $userid = $user->id;
+        $username = $user->name;
+        //dd($userid);
+        $datas = Team::find($userid);
+        //dd($datas);
+        return view('edit',compact('datas','userid','username'));
+    }
+
+    public function update(Request $request, Team $team)
+    {
+        $team->update($request->all());
+        return redirect('/home');
+    }
+
     
 }
