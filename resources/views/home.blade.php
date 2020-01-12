@@ -112,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cv">
+                    <!-- <div class="cv">
                         <h5 id="drop">Drop your CV here</h5>
                         <div class="cv-line">
                             <label for="file-input">
@@ -130,7 +130,7 @@
                         <div class="submitdata">
                             <button>Submit</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div> <br>
             <div class="member">
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cv">
+                    <!-- <div class="cv">
                         <h5 id="drop">Drop your CV here</h5>
                         <div class="cv-line">
                             <label for="file-input">
@@ -201,7 +201,7 @@
                         <div class="submitdata">
                             <button>Submit</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div> <br>
             <div class="member">
@@ -251,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cv">
+                    <!-- <div class="cv">
                         <h5 id="drop">Drop your CV here</h5>
                         <div class="cv-line">
                             <label for="file-input">
@@ -271,12 +271,12 @@
                         <div class="submitdata">
                             <button>Submit</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div> <br>
-            <div class="button-edit">
+            <!-- <div class="button-edit">
                 <button>Edit Group</button>
-            </div>
+            </div> -->
             <div class="contact">
                 
             </div>
