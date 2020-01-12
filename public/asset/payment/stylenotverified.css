@@ -138,6 +138,41 @@ body {
     color: gray;
 }
 
+
+.line-payment {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.uploadpayment {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.uploadpayment:hover {
+    background-color: #42e8e0;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+.iconpayment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#payment2 {
+    color: white;
+}
+
 .content-container {
     overflow: auto;
     flex: 1;

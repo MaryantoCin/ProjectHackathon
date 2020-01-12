@@ -78,6 +78,30 @@ $(".timeline-wrapper .single-item > span").on("mouseenter mouseleave", function(
     $(this).parent().addClass("active");
 });
 
+$(document).ready(function(){
+  $('.about-us-carousel').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    autoplay: true,
+    prevArrow: $('.carousel-prev'),
+    nextArrow: $('.carousel-next'),
+  });
+});
+
+$('.accordion-item > a').on('click', function (e) {
+  e.preventDefault()
+  $(this).toggleClass('active')
+  $(this).next().toggleClass('active')
+})
+
+$('.nav-item').on('click', function () {
+  $('.nav-item').removeClass('active')
+  $(this).addClass('active')
+})
+
 // FAQ
 
 // const items = document.querySelectorAll(".accordion a");

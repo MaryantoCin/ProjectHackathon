@@ -9,6 +9,8 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cookie|Fredoka+One|Indie+Flower|Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
   <link rel="stylesheet" href="{{asset('asset/welcome/style.css')}}">
   <link rel="icon" href="{{asset('asset/welcome/hackathon.png')}}">
   <title>BNCC Hackathon 3.0</title>
@@ -32,13 +34,13 @@
           <a href="#aboutus">About Us</a>
         </li>
         <li class="nav-item">
-          <a href="#">Sponsors</a>
+          <a href="#sponsors">Sponsors</a>
         </li>
         <li class="nav-item">
-          <a href="#">Media Partners</a>
+          <a href="#mp">Media Partners</a>
         </li>
         <li class="nav-item">
-          <a href="#why">FAQ</a>
+          <a href="#faq">FAQ</a>
         </li>
         <li class="nav-item">
           <a href="#contactus">Contact Us</a>
@@ -102,27 +104,28 @@
       <div class="modal-title">TEAM</div>
       <form method="POST" action="{{ route('register') }}">
        @csrf
-       <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+       <label>Name</label>
+       <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder ="Group Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-       <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+       <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Group Email" name="email" value="{{ old('email') }}" required autocomplete="email">
        @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-       <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+       <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" name="password" required autocomplete="new-password">
        @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-       <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-       <button type="submit" class="btn btn-primary">
+       <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Repeat Password" required autocomplete="new-password">
+       <button type="submit" class="form-button">
                                     {{ __('Register') }}
                                 </button>
       </form>
@@ -201,19 +204,19 @@
       <div class="modal-title">Login</div>
       <form method="POST" action="{{ route('login') }}">
       @csrf
-      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Enter your Email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
         @error('email')
           <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
           </span>
         @enderror
-      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+      <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Enter your Password" name="password" required autocomplete="current-password">
         @error('password')
           <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
           </span>
         @enderror
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="form-button">
                                     {{ __('Login') }}
                                 </button>
       </form>
@@ -228,26 +231,22 @@
 
   <!-- ABOUT US -->
 
-  <div class="aboutus" id="aboutus">
-    <div class="sidebar-aboutus">
-      <div class="about-title">
-        <h1>KNOW MORE ABOUT US!</h1>
+  <div class="about-us-wrapper">
+    <div class="wrapper">
+      <div class="about-us" id="aboutus">
+        <h1>ABOUT US</h1>
+        <img src="{{asset('asset/welcome/about-us.png')}}" alt="About us illustration">
+        <a class="know-more-button" href="#why">Why should you join us?</a>
       </div>
-      <div class="about-img">
-        <img src="{{asset('asset/welcome/laptop.png')}}" alt="">
+      <div class="about-us-carousel">
+        <img src="{{asset('asset/welcome/carousel-1.jpeg')}}" alt="Carousel page 1">
+        <!-- <img src="{{asset('asset/welcome/carousel-2.jpeg')}}" alt="Carousel page 2"> -->
       </div>
-      <!-- <div class="sidebar-container">
-     <img src="assets/aboutus.jpg" alt="aboutus" class="img-aboutus">
-     <button class="why-button">CLICK HERE</button>
-    </div> -->
-     </div>
-    <div class="content-aboutus">
-
     </div>
   </div>
 
   <!-- WHY SHOULD YOU JOIN -->
-  <div class="why-container">
+  <div class="why-container" id="why">
   <div class="why">
     <div class="why1">
     <h1>WHY SHOULD YOU JOIN?</h1>
@@ -352,6 +351,63 @@
 </div>
 </div>
 
+<!-- SPONSORS -->
+
+<div class="sponsors-container" id="sponsors">
+  <div class="wrapper">
+    <div class="platinum">
+    <h1>THANK YOU FOR YOUR SUPPORT!</h1>
+    <h2>Platinum</h2>
+    <div class="sponsors-imgs">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+    </div>
+    </div>
+    <div class="gold">
+    <h2>Gold</h2>
+    <div class="sponsors-imgs">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+    </div>
+  </div>
+    <div class="silver">
+    <h2>Silver</h2>
+    <div class="sponsors-imgs">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/sponsors.jpg')}}" alt="">
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- MEDIA PARTNERS -->
+
+<div class="mediapartner-container" id="mp">
+  <div class="wrapper">
+    <div class="mediapartner-bg">
+    <div class="mediapartner">
+    <h2>Media Partners</h2>
+    <div class="sponsors-imgs">
+      <img src="{{asset('asset/welcome/media.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/media.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/media.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/media.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/media.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/media.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/media.jpg')}}" alt="">
+      <img src="{{asset('asset/welcome/media.jpg')}}" alt="">
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+
 <!-- LOCATION -->
 
 <div class="location" id="location">
@@ -360,46 +416,52 @@
 </div>
 
 
-<!-- FAQ -->
-<!-- 
-<div class="faq-container">
+<div class="faq-container" id="faq">
 <div class="wrapper">
   <h2>Frequently Asked Questions</h2>
 
   <div class="accordion">
     <div class="accordion-item">
-      <a>Why is the moon sometimes out during the day?</a>
+      <a>Apa itu Hackathon?</a>
       <div class="faq-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Hackathon adalah sebuah kompetisi pengembangan software dimana 1 tim terdiri dari 3 orang yang dapat berperan sebagai hacker, hustler, dan hipster. 
+          Seluruh tim harus merancang solusi teknologi dalam bentuk program untuk memecahkan case yang diberikan dalam waktu yang singkat yaitu 24 jam.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>Why is the sky blue?</a>
+      <a>Saya sudah melakukan registrasi, tetapi tidak menerima pemberitahuan atau notifikasi apapun. Apakah artinya saya sudah terdaftar sebagai peserta lomba?</a>
       <div class="faq-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Setelah melakukan registrasi, peserta akan mendapatkan email dari panitia. Jika tidak ada email masuk, silakan dicek di bagian lain seperti important, spam, promotion dsb. 
+          Apabila masih tidak ada, harap menghubungi panitia melalui contact person.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>Will we ever discover aliens?</a>
+      <a>Berapa batas maksimum tim yang terdaftar?</a>
       <div class="faq-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Jumlah tim BNCC Hackathon 3.0 dibatasi sebanyak 25-30 tim.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>How much does the Earth weigh?</a>
+      <a>Apakah saya wajib untuk menginap untuk mengikuti BNCC Hackathon 3.0?</a>
       <div class="faq-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Ya, peserta wajib untuk menginap.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>How do airplanes stay up?</a>
+      <a>Apa saja yang disediakan oleh panitia di BNCC Hackathon 3.0?</a>
       <div class="faq-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Panitia akan menyediakan wifi, port untuk charging, proyektor beserta mic dan speaker untuk presentasi, meja, dan kursi. Untuk internet, para peserta sangat disarankan untuk membawa internet portable pribadi untuk menghindari hal-hal yang tidak diinginkan.</p>
       </div>
+      <div class="accordion-item">
+        <a>Apakah karya yang sebelumnya pernah dilombakan boleh dilombakan lagi di lomba ini?</a>
+        <div class="faq-content">
+          <p>Tidak boleh, dikarenakan BNCC Hackathon ingin mencari ide-ide kreatif dan orisinil dalam perlombaan ini. Hasil dari hackathon ini akan menjadi hak milik BNCC dan sponsor event BNCC Hackathon</p>
+        </div>
     </div>
   </div>
 </div>
-</div> -->
+</div>
+</div>
 
 <!-- CONTACT US -->
 
@@ -408,29 +470,33 @@
   <div class="title">
     <h1>FEEL FREE TO CONTACT US!</h1>
   </div>
+  <form action="{{url('message')}}" method="POST">
+  @csrf
   <div class="contact-form">
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Name">
+      <input type="text" class="input" placeholder="Name" name="name">
       <i class="fas fa-user"></i>
     </div>
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Email">
+      <input type="text" class="input" placeholder="Email" name="email">
       <i class="fas fa-envelope"></i>
     </div>
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Subject">
+      <input type="text" class="input" placeholder="Subject" name="subject">
       <i class="fas fa-file"></i>
     </div>
     <div class="contact-form-items">
-      <textarea class="input message" cols="30" rows="10" placeholder="Message....."></textarea>
+      <textarea class="input message" cols="30" rows="10" placeholder="Message....." name="message"></textarea>
     </div>
   </div>
-  
+  <button class="btn" type="submit">
   <div class="btn">
     SUBMIT
     <i class="fas fa-arrow-right"></i>
   </div>
-  
+  </button>
+  </form>
+
   <div class="social-icons">
     <div class="facebook">
       <a href="https://www.facebook.com/bina.nusantara.computer.club" class="facebook">
@@ -471,8 +537,8 @@
 
 
   <script type="text/javascript" src="{{asset('asset/welcome/main.js')}}"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- Atas adalah untuk FAQ -->
 
 </body>

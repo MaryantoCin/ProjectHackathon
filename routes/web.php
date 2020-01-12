@@ -18,4 +18,10 @@ Route::get('/create','TeamController@create',function(){
     //
 })->middleware('auth');
 Route::post('/home','TeamController@store');
+Route::get('/edit','HomeController@edit',function(){
+    //
+})->middleware('auth');
+Route::put('/update','HomeController@update');
 Route::get('/payment','HomeController@payment');
+Route::post('/message','MessageController@store');
+// Route::delete('/home/{team}','TeamController@destroy');
