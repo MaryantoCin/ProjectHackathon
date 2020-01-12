@@ -282,14 +282,14 @@
             <div class="contact">
                 
             </div>
-            <div class="line-payment">
+            <!-- <div class="line-payment">
                 <h5 id="payment2">Upload Payment Receipt</h5>
                 <div class="uploadpayment">
                     <label for="file-input">
                     <img src="{{asset('asset/home/Icon-10.png')}}" alt="" width="70px" height="70px" class="iconpayment"></label>
                     <input id="file-input" type="file">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </body>

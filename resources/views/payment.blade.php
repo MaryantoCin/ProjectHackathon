@@ -73,9 +73,24 @@
                     <div id="infopayment">
                         <p>Please do payment before the deadline payment!<br>
                             See the deadline payment 
-                            <a href="../../Home/index.html"><i id="hyperlink">here</i></a>
+                            <a href="/home"><i id="hyperlink">here</i></a>
                         </p>
                     </div>
+                    <div class="line-payment">
+                <h5 id="payment2">Upload Payment Receipt</h5>
+                <form action="{{url('update')}}" method="post">
+                @csrf
+                {{method_field('PUT')}}
+                <div class="uploadpayment">
+                    <label for="file-input">
+                    <img src="{{asset('asset/home/Icon-10.png')}}" alt="" width="70px" height="70px" class="iconpayment"></label>
+                    <input id="file-input" type="file" name="payment_image">
+                </div>
+                <div>
+                  <button type="submit">Submit</button>
+                </div>
+                </form>
+            </div>
                 </div>
             </div>
         </div>
