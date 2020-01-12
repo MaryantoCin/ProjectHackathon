@@ -470,29 +470,33 @@
   <div class="title">
     <h1>FEEL FREE TO CONTACT US!</h1>
   </div>
+  <form action="{{url('message')}}" method="POST">
+  @csrf
   <div class="contact-form">
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Name">
+      <input type="text" class="input" placeholder="Name" name="name">
       <i class="fas fa-user"></i>
     </div>
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Email">
+      <input type="text" class="input" placeholder="Email" name="email">
       <i class="fas fa-envelope"></i>
     </div>
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Subject">
+      <input type="text" class="input" placeholder="Subject" name="subject">
       <i class="fas fa-file"></i>
     </div>
     <div class="contact-form-items">
-      <textarea class="input message" cols="30" rows="10" placeholder="Message....."></textarea>
+      <textarea class="input message" cols="30" rows="10" placeholder="Message....." name="message"></textarea>
     </div>
   </div>
-  
+  <button class="btn" type="submit">
   <div class="btn">
     SUBMIT
     <i class="fas fa-arrow-right"></i>
   </div>
-  
+  </button>
+  </form>
+
   <div class="social-icons">
     <div class="facebook">
       <a href="https://www.facebook.com/bina.nusantara.computer.club" class="facebook">
