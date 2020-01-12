@@ -30,7 +30,7 @@ class TeamController extends Controller
         // dd($user);
         $userid = $user->id;
         // dd($userid);
-        return view('create');
+        return view('create')->with('alert-success','Data berhasil diTAMBAH!');
     }
 
     /**
