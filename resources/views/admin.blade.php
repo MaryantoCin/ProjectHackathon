@@ -157,17 +157,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cv">
-                        <h3 id="payment-status">Payment Status</h3>
-                        <img src="{{asset('asset/admin/Icon-13.png')}}" alt="" width="250px" height="250px" class="filecv">
-                    </div>
-                    <div class="">
-                    <form action="{{url('home/'.$data->id)}}" method="POST">
-                        @csrf
-                        {{ method_field('DELETE') }}
-                        <button type="submit">Delete</button>
-                    </form>
-                    </div>
+                    <div class="cv-wrapper">
+                        <div class="cv">
+                            <h3 id="payment-status">Payment Status</h3>
+                            <img src="{{asset('asset/admin/Icon-13.png')}}" alt="" width="250px" height="250px" class="filecv">
+                        </div>
+                        <div class="deletebutton">
+                        <form action="{{url('home/'.$data->id)}}" method="POST" class="deletedbutton">
+                            @csrf
+                            {{ method_field('DELETE') }}
+                            <button type="submit">Delete</button>
+                        </form>
+                        </div>
+                    </div> 
+                    
                 </div>
             </div> <br>
             @endforeach

@@ -253,3 +253,14 @@ button:hover {
     background-color: white;
     color: #ff2cc4;
 }
+
+.cv-wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.deletedbutton {
+    display: flex;
+    justify-content: center;
+}

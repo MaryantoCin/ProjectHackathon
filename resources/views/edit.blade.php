@@ -123,7 +123,7 @@
                             <label for="file-input">
                             <img src="{{asset('asset/edit/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
                             <input id="file-input" type="file" name="leaderCV">
-                    </div>
+                        </div>
                         
                         <h5 id="drop">Upload your project here</h5>
                         <div class="cv-line">
