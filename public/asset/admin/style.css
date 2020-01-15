@@ -118,6 +118,10 @@ body {
     background-image: url('house.png');
 }
 
+.menu-icon.messages {
+    background-image: url('messages.png');
+}
+
 .menu-icon.payment {
     background-image: url('piggy-bank.png');
 }

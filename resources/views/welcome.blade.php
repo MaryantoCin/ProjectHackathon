@@ -240,7 +240,7 @@
       </div>
       <div class="about-us-carousel">
         <img src="{{asset('asset/welcome/carousel-1.jpeg')}}" alt="Carousel page 1">
-        <!-- <img src="{{asset('asset/welcome/carousel-2.jpeg')}}" alt="Carousel page 2"> -->
+        <img src="{{asset('asset/welcome/carousel-2.jpeg')}}" alt="Carousel page 2">
       </div>
     </div>
   </div>
@@ -281,6 +281,7 @@
 
 <!-- TIMELINE -->
 
+<div class="timeline-bg">
 <div class="timeline" id="timeline">
   <div class="timeline-title">
   </div>
@@ -312,6 +313,8 @@
       </div>
   </div>
   
+  </div>
+
 </div>
 
 <!-- RULES -->

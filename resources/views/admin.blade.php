@@ -25,6 +25,12 @@
                     </a>
                 </li>
                 <li>
+                    <a class="menu-item" href="#">
+                        <div class="menu-icon messages"></div>
+                        <div class="menu-text">Messages</div>
+                    </a>
+                </li>
+                <li>
                 <a class="menu-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

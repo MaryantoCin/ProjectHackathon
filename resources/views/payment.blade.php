@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="menu-item" href="/payment">
+                    <a class="menu-item active" href="/payment">
                         <div class="menu-icon payment"></div>
                         <div class="menu-text">Payment</div>
                     </a>
