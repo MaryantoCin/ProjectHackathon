@@ -343,3 +343,14 @@ button:hover {
 .timeline-dashboard h3 {
     text-align: center;
 }
+
+    
+.submitpayment1 {    
+    display: flex;
+    justify-content: center;
+}
+
+.submitpayment {
+    display: flex;
+    margin-top: 7px;
+}

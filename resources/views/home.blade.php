@@ -20,7 +20,7 @@
             </div> <br>
             <ul class="menu">
                 <li>
-                    <a class="menu-item" href="/home">
+                    <a class="menu-item active" href="/home">
                         <div class="menu-icon home"></div>
                         <div class="menu-text">Home</div>
                     </a>
@@ -282,14 +282,21 @@
             <div class="contact">
                 
             </div>
-            <!-- <div class="line-payment">
+            <div class="line-payment">
                 <h5 id="payment2">Upload Payment Receipt</h5>
+                <form action="{{url('update')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                {{method_field('PUT')}}
                 <div class="uploadpayment">
                     <label for="file-input">
                     <img src="{{asset('asset/home/Icon-10.png')}}" alt="" width="70px" height="70px" class="iconpayment"></label>
-                    <input id="file-input" type="file">
+                    <input id="file-input" type="file" name="payment_image">
                 </div>
-            </div> -->
+                <div class="submitpayment1" id="submitpayment1">
+                  <button class="submitpayment" type="submit">Submit</button>
+                </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>

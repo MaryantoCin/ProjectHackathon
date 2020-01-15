@@ -34,7 +34,7 @@ class HomeController extends Controller
         if ($userid == 1){
             $datas = Team::all();
             $datausers = User::all();
-            //dd($data);
+            //  dd($datas);
             return view('admin',compact('datas','datausers'));
         }
         else{
@@ -72,6 +72,7 @@ class HomeController extends Controller
     public function update(Request $request, Team $team)
     {
         $team->update($request->all());
+        // dd($team);
         return redirect('/home');
     }
 

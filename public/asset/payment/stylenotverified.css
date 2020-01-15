@@ -230,3 +230,24 @@ body {
     padding: 30px;
     margin-bottom: 20px;
 }
+
+#verified {
+    background-color: #42e8e0;
+    width: auto;
+    color: #323075;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 7px;
+}
+
+#notverified {
+    background-color: #FF2CC4;
+    width: auto;
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-bottom: 7px;
+}
+

@@ -118,6 +118,10 @@ body {
     background-image: url('house.png');
 }
 
+.menu-icon.messages {
+    background-image: url('messages.png');
+}
+
 .menu-icon.payment {
     background-image: url('piggy-bank.png');
 }
@@ -252,4 +256,15 @@ button {
 button:hover {
     background-color: white;
     color: #ff2cc4;
+}
+
+.cv-wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.deletedbutton {
+    display: flex;
+    justify-content: center;
 }
