@@ -78,7 +78,7 @@
                     </div>
                     <div class="line-payment">
                 <h5 id="payment2">Upload Payment Receipt</h5>
-                <form action="{{url('update')}}" method="post">
+                <form action="{{url('update')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 {{method_field('PUT')}}
                 <div class="uploadpayment">

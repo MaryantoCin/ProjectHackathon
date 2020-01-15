@@ -64,7 +64,7 @@
             </div>
         </div>
         <div>
-        <form action="{{url('update')}}" method="POST">
+        <form action="{{url('update/'.$datas->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
         {{method_field('PUT')}}
         </div>

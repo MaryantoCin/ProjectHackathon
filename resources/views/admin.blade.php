@@ -161,13 +161,13 @@
                         <h3 id="payment-status">Payment Status</h3>
                         <img src="{{asset('asset/admin/Icon-13.png')}}" alt="" width="250px" height="250px" class="filecv">
                     </div>
-                    <!-- <div class="">
-                    <form action="{{url('home/'.$team->id)}}" method="POST">
+                    <div class="">
+                    <form action="{{url('home/'.$data->id)}}" method="POST">
                         @csrf
                         {{ method_field('DELETE') }}
                         <button type="submit">Delete</button>
                     </form>
-                    </div> -->
+                    </div>
                 </div>
             </div> <br>
             @endforeach
