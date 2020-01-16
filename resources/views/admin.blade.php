@@ -168,8 +168,14 @@
                             <h3 id="payment-status">Payment Status</h3>
                             <img src="{{asset('asset/admin/Icon-13.png')}}" alt="" width="250px" height="250px" class="filecv">
                         </div>
+                        <div class="cv">
+                            <h3 id="payment-status">Payment Image</h3>
+                            <br>
+                            <img src="{{ url('/team_data/'.$data->payment_image) }}" width="250px" class=>
+                        </div>
+                        <br>
                         <div class="deletebutton">
-                        <form action="{{url('home/'.$data->id)}}" method="POST" class="deletedbutton">
+                        <form action="{{route('data.destroy',$data)}}" method="POST" class="deletedbutton">
                             @csrf
                             {{ method_field('DELETE') }}
                             <button type="submit">Delete</button>

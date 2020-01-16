@@ -24,4 +24,4 @@ Route::get('/edit','HomeController@edit',function(){
 Route::put('/update/{team}','HomeController@update');
 Route::get('/payment','HomeController@payment');
 Route::post('/message','MessageController@store');
-Route::delete('/home/{team}','TeamController@destroy');
+Route::delete('/home/{team}','HomeController@destroy')->name('data.destroy');
