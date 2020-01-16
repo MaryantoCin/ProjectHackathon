@@ -132,7 +132,7 @@ class HomeController extends Controller
         }
 
         $team->update($data);
-        //  dd($team);
+        //dd($team);
          
         return redirect('/home');
 
