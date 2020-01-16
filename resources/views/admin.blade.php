@@ -166,10 +166,43 @@
                     <div class="cv-wrapper">
                         <div class="cv">
                             <h3 id="payment-status">Payment Status</h3>
+                            @if($data->payment_image == null)
+                            <img src="{{asset('asset/admin/Icon-14.png')}}" alt="" width="250px" height="250px" class="filecv">
+                            @else
                             <img src="{{asset('asset/admin/Icon-13.png')}}" alt="" width="250px" height="250px" class="filecv">
+                            @endif
                         </div>
+
+                        @if($data->payment_image !=null)
+                            <div class="cv">
+                            <h3 id="payment-status">Payment Image</h3>
+                            <br>
+                            <img src="{{ url('/team_data/'.$data->payment_image) }}" width="250px">
+                        </div>
+                        <br>
+                        @endif
+
+                        @if($data->leaderCV != null || $data->member1CV != null || $data->member2CV != null)
+                            <div class="cv">
+                            <h3 id="payment-status">CV</h3>
+                            <br>
+                            <div>
+                                @if($data->leaderCV != null)
+                                <img src="{{ url('/team_data/'.$data->leaderCV) }}" width="100px" >
+                                @endif
+                                @if($data->member1CV != null)
+                                <img src="{{ url('/team_data/'.$data->member1CV) }}" width="100px" >
+                                @endif
+                                @if($data->member2CV != null)
+                                <img src="{{ url('/team_data/'.$data->member2CV) }}" width="100px" >
+                                @endif
+                            </div>
+                            </div>
+                            <br>
+                        @endif
+
                         <div class="deletebutton">
-                        <form action="{{url('home/'.$data->id)}}" method="POST" class="deletedbutton">
+                        <form action="{{route('data.destroy',$data)}}" method="POST" class="deletedbutton">
                             @csrf
                             {{ method_field('DELETE') }}
                             <button type="submit">Delete</button>

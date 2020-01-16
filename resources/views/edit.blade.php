@@ -261,9 +261,11 @@
                         </div>
                     </div>
                 </div>
-            </div> <br>
+                
+            </div> 
+            <br>
             <div class="button-submit">
-            <button type="submit">Simpan</button>
+            <button type="submit">Submit</button>
             </div>
         </div>
         </form>
