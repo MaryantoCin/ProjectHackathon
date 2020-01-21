@@ -31,8 +31,6 @@ class CreateTeamRequest extends FormRequest
             "leaderNumber" => 'required',
             "leaderLine" => 'required',
             "leaderGithub" => 'required',
-            "leaderCV" => 'nullable|file|max:4096',
-            "leaderProject" => 'nullable|file|max:20480',
             "member1Name" => 'required',
             "member1Address" => 'required',
             "member1Birth" => 'required',
@@ -40,8 +38,6 @@ class CreateTeamRequest extends FormRequest
             "member1Number" => 'required',
             "member1Line" => 'required',
             "member1Github" => 'required',
-            "member1CV" => 'nullable|file|max:4096',
-            "member1Project" => 'nullable|file|max:20480',
             "member2Name" => 'required',
             "member2Address" => 'required',
             "member2Birth" => 'required',
@@ -49,6 +45,10 @@ class CreateTeamRequest extends FormRequest
             "member2Number" => 'required',
             "member2Line" => 'required',
             "member2Github" => 'required',
+            "leaderCV" => 'nullable|file|max:4096',
+            "leaderProject" => 'nullable|file|max:20480',
+            "member1CV" => 'nullable|file|max:4096',
+            "member1Project" => 'nullable|file|max:20480',
             "member2CV" => 'nullable|file|max:4096',
             "member2Project" => 'nullable|file|max:20480'
         ];
