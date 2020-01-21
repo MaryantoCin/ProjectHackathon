@@ -25,6 +25,8 @@ Route::put('/update/{team}','HomeController@update');
 Route::get('/payment','HomeController@payment');
 Route::post('/message','MessageController@store');
 Route::delete('/home/{team}','HomeController@destroy')->name('data.destroy');
+Route::get('/message','HomeController@messages');
+Route::delete('/message/{message}','HomeController@messageDestroy')->name('message.destroy');
 Route::get('/download/leaderCV/{team}','HomeController@downloadLeaderCV')->name('download.leaderCV');
 Route::get('/download/leaderProject/{team}','HomeController@downloadLeaderProject')->name('download.leaderProject');
 Route::get('/download/member1CV/{team}','HomeController@downloadMember1CV')->name('download.member1CV');

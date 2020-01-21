@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\User;
 use App\Team;
+use App\Message;
 
 
 class HomeController extends Controller
@@ -51,6 +52,16 @@ class HomeController extends Controller
             }
         }
         
+    }
+
+    public function messages(){
+        $user = Auth::user();
+        $useremail = $user->email;
+        if ($useremail == "eeo@bncc.net"){
+            $messagess = Message::all();
+            // dd($messages);
+            return view('message',compact('messagess'));
+        }
     }
 
     public function payment()
@@ -147,6 +158,12 @@ class HomeController extends Controller
         $user->delete();
         $team->delete();
         return redirect('/home');
+    }
+
+    public function messageDestroy(Request $request,Message $message)
+    {
+        $message->delete();
+        return redirect('/message');
     }
 
     public function downloadLeaderCV(Request $request, Team $team){
