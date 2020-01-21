@@ -85,7 +85,7 @@ class TeamController extends Controller
             $member2project->move($upload_directory,$name_member2project);
             $data['member2Project'] = $name_member2project;
         }
-        
+        // dd($member2cv);
         Team::create($data);
         return redirect('/home');
     }
