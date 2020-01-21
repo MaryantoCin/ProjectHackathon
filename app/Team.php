@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
 {
+    public $team = 'team';
     protected $fillable = [
         "leaderName",
         "leaderAddress",
