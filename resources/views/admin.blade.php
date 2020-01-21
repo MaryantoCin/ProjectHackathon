@@ -50,6 +50,7 @@
         </div>
         <div class="content-container">
             @foreach($datas as $data)
+            @if ($data->id!=1)
             <div class="member">
                 <h1 id="namatim">Team ID {{$data->id}}</h1>
                 <div class="leader">
@@ -211,7 +212,10 @@
                     </div> 
                     
                 </div>
-            </div> <br>
+            </div> 
+       
+            <br>
+            @endif
             @endforeach
             
         </div>

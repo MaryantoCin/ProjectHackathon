@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-page {
+    background-image: url(dashboard32.png);
+    height: 725px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-white {
+    background-color: white;
+    padding: 45px;
+    width: 30%;
+    border-radius: 20px;
+}
+
+#deleted {
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.logoutbutton {
+    border-radius: 11px;
+    border: none;
+    height: 100%;
+    background-color: #42e8e0;
+    font-size: 16px;
+    padding: 9px;
+    color: white;
+}
+
+.logoutbutton:hover {
+    background-color: #ff2cc4;
+}
