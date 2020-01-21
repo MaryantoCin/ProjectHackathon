@@ -148,4 +148,34 @@ class HomeController extends Controller
         $team->delete();
         return redirect('/home');
     }
+
+    public function downloadLeaderCV(Request $request, Team $team){
+        $path = '/team_data/'.$team->leaderCV;
+        return response()->download(public_path($path));
+    }
+
+    public function downloadLeaderProject(Request $request, Team $team){
+        $path = '/team_data/'.$team->leaderProject;
+        return response()->download(public_path($path));
+    }
+
+    public function downloadMember1CV(Request $request, Team $team){
+        $path = '/team_data/'.$team->member1CV;
+        return response()->download(public_path($path));
+    }
+
+    public function downloadMember1Project(Request $request, Team $team){
+        $path = '/team_data/'.$team->member1Project;
+        return response()->download(public_path($path));
+    }
+
+    public function downloadMember2CV(Request $request, Team $team){
+        $path = '/team_data/'.$team->member2CV;
+        return response()->download(public_path($path));
+    }
+
+    public function downloadMember2Project(Request $request, Team $team){
+        $path = '/team_data/'.$team->member2Project;
+        return response()->download(public_path($path));
+    }
 }
