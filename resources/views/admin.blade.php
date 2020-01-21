@@ -229,7 +229,7 @@
                                 </form>
                                 @endif
                                 @if($data->member2Project != null)
-                                <form action="{{route('download.member2CV',$data)}}" method="GET" class="deletedbutton">
+                                <form action="{{route('download.member2Project',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member2 Project</button>
                                 </form>
