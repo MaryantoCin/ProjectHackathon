@@ -25,3 +25,10 @@ Route::put('/update/{team}','HomeController@update');
 Route::get('/payment','HomeController@payment');
 Route::post('/message','MessageController@store');
 Route::delete('/home/{team}','HomeController@destroy')->name('data.destroy');
+Route::get('/download/leaderCV/{team}','HomeController@downloadLeaderCV')->name('download.leaderCV');
+Route::get('/download/leaderProject/{team}','HomeController@downloadLeaderProject')->name('download.leaderProject');
+Route::get('/download/member1CV/{team}','HomeController@downloadMember1CV')->name('download.member1CV');
+Route::get('/download/member1Project/{team}','HomeController@downloadMember1Project')->name('download.member1Project');
+Route::get('/download/member2CV/{team}','HomeController@downloadMember2CV')->name('download.member2CV');
+Route::get('/download/member2Project/{team}','HomeController@downloadMember2Project')->name('download.member2Project');
+

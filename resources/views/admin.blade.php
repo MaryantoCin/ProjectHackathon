@@ -50,6 +50,7 @@
         </div>
         <div class="content-container">
             @foreach($datas as $data)
+            @if ($data->id!=1)
             <div class="member">
                 <h1 id="namatim">Team ID {{$data->id}}</h1>
                 <div class="leader">
@@ -188,13 +189,50 @@
                             <br>
                             <div>
                                 @if($data->leaderCV != null)
-                                <img src="{{ url('/team_data/'.$data->leaderCV) }}" width="100px" >
+                                <form action="{{route('download.leaderCV',$data)}}" method="GET" class="deletedbutton">
+                                    @csrf
+                                    <button type="submit">Download Leader CV</button>
+                                </form>
                                 @endif
                                 @if($data->member1CV != null)
-                                <img src="{{ url('/team_data/'.$data->member1CV) }}" width="100px" >
+                                <form action="{{route('download.member1CV',$data)}}" method="GET" class="deletedbutton">
+                                    @csrf
+                                    <button type="submit">Download Member1 CV</button>
+                                </form>
                                 @endif
                                 @if($data->member2CV != null)
-                                <img src="{{ url('/team_data/'.$data->member2CV) }}" width="100px" >
+                                <form action="{{route('download.member2CV',$data)}}" method="GET" class="deletedbutton">
+                                    @csrf
+                                    <button type="submit">Download Member2 CV</button>
+                                </form>
+                                @endif
+                            </div>
+                            </div>
+                            <br>
+                        @endif
+
+                        @if($data->leaderProject != null || $data->member1Project != null || $data->member2Project != null)
+                            <div class="cv">
+                            <h3 id="payment-status">Project</h3>
+                            <br>
+                            <div>
+                                @if($data->leaderProject != null)
+                                <form action="{{route('download.leaderProject',$data)}}" method="GET" class="deletedbutton">
+                                    @csrf
+                                    <button type="submit">Download Leader Project</button>
+                                </form>
+                                @endif
+                                @if($data->member1Project != null)
+                                <form action="{{route('download.member1Project',$data)}}" method="GET" class="deletedbutton">
+                                    @csrf
+                                    <button type="submit">Download Member1 Project</button>
+                                </form>
+                                @endif
+                                @if($data->member2Project != null)
+                                <form action="{{route('download.member2Project',$data)}}" method="GET" class="deletedbutton">
+                                    @csrf
+                                    <button type="submit">Download Member2 Project</button>
+                                </form>
                                 @endif
                             </div>
                             </div>
@@ -205,13 +243,16 @@
                         <form action="{{route('data.destroy',$data)}}" method="POST" class="deletedbutton">
                             @csrf
                             {{ method_field('DELETE') }}
-                            <button type="submit">Delete</button>
+                            <button type="submit">Delete Team</button>
                         </form>
                         </div>
                     </div> 
                     
                 </div>
-            </div> <br>
+            </div> 
+       
+            <br>
+            @endif
             @endforeach
             
         </div>
