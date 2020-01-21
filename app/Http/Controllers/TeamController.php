@@ -41,9 +41,11 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->file('file');
+        dd($request->file('files'));
         $upload_directory = 'team_data';
-        $data = $request->all();
-
+        
+        // dd($data['leaderProject']);
         $leadercv = $request->file('leaderCV');
         if($leadercv != null){
             $name_leadercv = time()."_".$leadercv->getClientOriginalName();
@@ -85,7 +87,8 @@ class TeamController extends Controller
             $member2project->move($upload_directory,$name_member2project);
             $data['member2Project'] = $name_member2project;
         }
-        // dd($member2cv);
+
+        dd($data);
         Team::create($data);
         return redirect('/home');
     }
