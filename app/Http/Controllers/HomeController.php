@@ -76,6 +76,13 @@ class HomeController extends Controller
         return view('payment',compact('datas','userid','username'));
     }
 
+    public function verifyPayment(Request $request, Team $team)
+    {
+        $team->update(['payment_status'=>1]);
+        // dd($team);
+        return redirect('/home');
+    }
+
     public function edit()
     {
         $user = Auth::user();

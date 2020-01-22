@@ -87,7 +87,7 @@ class TeamController extends Controller
             $data['member2Project'] = $name_member2project;
         }
 
-        // dd($data);
+        //  dd($data);
         Team::create($data);
         return redirect('/home');
     }

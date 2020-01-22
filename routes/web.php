@@ -23,6 +23,7 @@ Route::get('/edit','HomeController@edit',function(){
 })->middleware('auth');
 Route::put('/update/{team}','HomeController@update');
 Route::get('/payment','HomeController@payment');
+Route::put('/update/payment/{team}','HomeController@verifyPayment')->name('verify.payment');
 Route::post('/message','MessageController@store');
 Route::delete('/home/{team}','HomeController@destroy')->name('data.destroy');
 Route::get('/message','HomeController@messages');

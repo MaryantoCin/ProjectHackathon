@@ -167,7 +167,7 @@
                     <div class="cv-wrapper">
                         <div class="cv">
                             <h3 id="payment-status">Payment Status</h3>
-                            @if($data->payment_image == null)
+                            @if($data->payment_status == null)
                             <img src="{{asset('asset/admin/Icon-14.png')}}" alt="" width="250px" height="250px" class="filecv">
                             @else
                             <img src="{{asset('asset/admin/Icon-13.png')}}" alt="" width="250px" height="250px" class="filecv">
@@ -182,6 +182,24 @@
                         </div>
                         <br>
                         @endif
+
+                        @if($data->payment_image !=null)
+                            <div class="cv">
+                            <form action="{{route('verify.payment',$data)}}" method="POST" class="deletedbutton">
+                            @csrf
+                            {{ method_field('PUT') }}
+                            <button type="submit">Verify Payment</button>
+                            </form>
+                            </div>
+                        <br>
+                        @endif
+
+                        <div class="cv">
+                            <h3 id="payment-status">Registered On</h3>
+                            <br>
+                            <div class="subcontent-data">{{$data->created_at}}</div>
+                        </div>
+                        <br>
 
                         @if($data->leaderCV != null || $data->member1CV != null || $data->member2CV != null)
                             <div class="cv">

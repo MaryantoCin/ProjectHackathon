@@ -35,6 +35,7 @@ class Team extends Model
         "member2Github",
         "member2CV",
         "member2Project",
-        "payment_image"
+        "payment_image",
+        "payment_status"
     ];
 }
