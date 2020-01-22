@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="menu-item" href="#">
+                    <a class="menu-item" href="/message">
                         <div class="menu-icon messages"></div>
                         <div class="menu-text">Messages</div>
                     </a>
@@ -193,18 +193,20 @@
                                     @csrf
                                     <button type="submit">Download Leader CV</button>
                                 </form>
+                                <br>
                                 @endif
                                 @if($data->member1CV != null)
                                 <form action="{{route('download.member1CV',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member1 CV</button>
                                 </form>
+                                <br>
                                 @endif
                                 @if($data->member2CV != null)
                                 <form action="{{route('download.member2CV',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member2 CV</button>
-                                </form>
+                                </form><br>
                                 @endif
                             </div>
                             </div>
@@ -220,19 +222,19 @@
                                 <form action="{{route('download.leaderProject',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Leader Project</button>
-                                </form>
+                                </form><br>
                                 @endif
                                 @if($data->member1Project != null)
                                 <form action="{{route('download.member1Project',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member1 Project</button>
-                                </form>
+                                </form><br>
                                 @endif
                                 @if($data->member2Project != null)
                                 <form action="{{route('download.member2Project',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member2 Project</button>
-                                </form>
+                                </form><br>
                                 @endif
                             </div>
                             </div>

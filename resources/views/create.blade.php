@@ -20,9 +20,9 @@
         <input type="text" class="form-control" placeholder="Whatsapp Number" name="leaderNumber">
         <input type="text" class="form-control" placeholder="Line ID" name="leaderLine">
         <input type="text" class="form-control" placeholder="GitHub ID" name="leaderGithub">
-        <input type="file" id="file" name="files[]" multiple="true">
+        <input type="file" id="leaderCV" name="leaderCV">
         <label for="file" class="form-control">Upload CV</label>
-        <input type="file" id="file" name="files[]"multiple="true">
+        <input type="file" id="leaderProject" name="leaderProject">
         <label for="file" class="form-control">Upload Project</label>
       <div class="modal-title">MEMBER 1</div>
         <input type="text" class="form-control" placeholder="Full Name" name="member1Name">
@@ -32,9 +32,9 @@
         <input type="text" class="form-control" placeholder="Whatsapp Number" name="member1Number">
         <input type="text" class="form-control" placeholder="Line ID" name="member1Line">
         <input type="text" class="form-control" placeholder="GitHub ID" name="member1Github">
-        <input type="file" id="file1" name='files[]'multiple="true">
+        <input type="file" id="member1CV" name='member1CV'>
         <label for="file" class="form-control">Upload CV</label>
-        <input type="file" id="file2" name="files[]"multiple="true">
+        <input type="file" id="member1Project" name="member1Project">
         <label for="file" class="form-control">Upload Project</label>
       <div class="modal-title">MEMBER 2</div>
         <input type="text" class="form-control" placeholder="Full Name" name="member2Name">
@@ -44,9 +44,9 @@
         <input type="text" class="form-control" placeholder="Whatsapp Number" name="member2Number">
         <input type="text" class="form-control" placeholder="Line ID" name="member2Line">
         <input type="text" class="form-control" placeholder="GitHub ID" name="member2Github">
-        <input type="file" id="file" name="files[]"multiple="true">
+        <input type="file" id="member2CV" name="member2CV">
         <label for="file" class="form-control">Upload CV</label>
-        <input type="file" id="file" name="files[]"multiple="true">
+        <input type="file" id="member2Project" name="member2Project">
         <label for="file" class="form-control">Upload Project</label>
         <div class="form-bar">
         <button class="form-button" type="submit">Register</button>

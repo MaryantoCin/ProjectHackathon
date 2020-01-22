@@ -19,7 +19,7 @@
             </div> <br>
             <ul class="menu">
                 <li>
-                    <a class="menu-item" href="#">
+                    <a class="menu-item" href="/home">
                         <div class="menu-icon home"></div>
                         <div class="menu-text">Home</div>
                     </a>

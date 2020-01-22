@@ -122,14 +122,14 @@
                         <div class="cv-line">
                             <label for="file-input">
                             <img src="{{asset('asset/edit/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
-                            <input id="file-input" type="file" name="leaderCV">
+                            <input id="file-input1" type="file" name="leaderCV">
                         </div>
                         
                         <h5 id="drop">Upload your project here</h5>
                         <div class="cv-line">
                             <label for="file-input">
                             <img src="{{asset('asset/edit/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
-                            <input id="file-input" type="file" name="leaderProject">
+                            <input id="file-input2" type="file" name="leaderProject">
                         </div>
                     </div>
                 </div>
@@ -186,14 +186,14 @@
                         <div class="cv-line">
                             <label for="file-input">
                             <img src="{{asset('asset/edit/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
-                            <input id="file-input" type="file" name="member1CV">
+                            <input id="file-input3" type="file" name="member1CV">
                     </div>
                         
                         <h5 id="drop">Upload your project here</h5>
                         <div class="cv-line">
                             <label for="file-input">
                             <img src="{{asset('asset/edit/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
-                            <input id="file-input" type="file" name="member1Project">
+                            <input id="file-input4" type="file" name="member1Project">
                         </div>
                     </div>
                 </div>
@@ -250,14 +250,14 @@
                         <div class="cv-line">
                             <label for="file-input">
                             <img src="{{asset('asset/edit/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
-                            <input id="file-input" type="file" name="member2CV">
+                            <input id="file-input5" type="file" name="member2CV">
                     </div>
                         
                         <h5 id="drop">Upload your project here</h5>
                         <div class="cv-line">
                             <label for="file-input">
                             <img src="{{asset('asset/edit/Icon-099.png')}}" alt="" width="150px" class="filecv"></label>
-                            <input id="file-input" type="file" name="member2Project">
+                            <input id="file-input6" type="file" name="member2Project">
                         </div>
                     </div>
                 </div>
