@@ -59,7 +59,7 @@ class HomeController extends Controller
         $useremail = $user->email;
         if ($useremail == "eeo@bncc.net"){
             $messagess = Message::all();
-            // dd($messages);
+             //dd($messagess);
             return view('message',compact('messagess'));
         }
     }

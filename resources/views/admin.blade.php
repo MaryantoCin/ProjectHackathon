@@ -183,7 +183,7 @@
                         <br>
                         @endif
 
-                        @if($data->payment_image !=null)
+                        @if($data->payment_image !=null && $data->payment_status!=1)
                             <div class="cv">
                             <form action="{{route('verify.payment',$data)}}" method="POST" class="deletedbutton">
                             @csrf
@@ -197,7 +197,7 @@
                         <div class="cv">
                             <h3 id="payment-status">Registered On</h3>
                             <br>
-                            <div class="subcontent-data">{{$data->created_at}}</div>
+                            <h5 id="register-date">{{$data->created_at}}</h5>
                         </div>
                         <br>
 
@@ -263,7 +263,7 @@
                         <form action="{{route('data.destroy',$data)}}" method="POST" class="deletedbutton">
                             @csrf
                             {{ method_field('DELETE') }}
-                            <button type="submit">Delete Team</button>
+                            <button id="delete_button"type="submit">Delete Team</button>
                         </form>
                         </div>
                     </div> 

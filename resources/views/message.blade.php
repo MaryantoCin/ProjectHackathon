@@ -90,11 +90,13 @@
                     </div> 
                     
                 </div>
+                <br>
+                @endforeach
             </div> 
        
-            <br>
             
-            @endforeach
+            
+            
             
         </div>
     </div>

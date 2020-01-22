@@ -226,6 +226,7 @@ body {
     justify-content: center;
 }
 
+
 /*.filecv {
     display: flex;
     justify-content: center;
@@ -236,7 +237,32 @@ body {
     width: 170px;
 }
 
-#file-input {
+#file-input1 {
+    width: 0;
+    height: 0;
+}
+
+#file-input2 {
+    width: 0;
+    height: 0;
+}
+
+#file-input3 {
+    width: 0;
+    height: 0;
+}
+
+#file-input4 {
+    width: 0;
+    height: 0;
+}
+
+#file-input5 {
+    width: 0;
+    height: 0;
+}
+
+#file-input6 {
     width: 0;
     height: 0;
 }
@@ -350,4 +376,7 @@ button:hover {
 
 .button-submit{
     margin-left: 45%;
+}
+.button:hover{
+    cursor: pointer;
 }

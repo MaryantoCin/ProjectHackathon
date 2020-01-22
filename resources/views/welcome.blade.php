@@ -477,19 +477,19 @@
   @csrf
   <div class="contact-form">
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Name" name="name">
+      <input type="text" class="input" placeholder="Name" name="name" required>
       <i class="fas fa-user"></i>
     </div>
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Email" name="email">
+      <input type="text" class="input" placeholder="Email" name="email" required>
       <i class="fas fa-envelope"></i>
     </div>
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Subject" name="subject">
+      <input type="text" class="input" placeholder="Subject" name="subject" required>
       <i class="fas fa-file"></i>
     </div>
     <div class="contact-form-items">
-      <textarea class="input message" cols="30" rows="10" placeholder="Message....." name="message"></textarea>
+      <textarea class="input message" cols="30" rows="10" placeholder="Message....." name="message" required></textarea>
     </div>
   </div>
   <button class="btn" type="submit">

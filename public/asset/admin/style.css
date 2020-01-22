@@ -223,6 +223,11 @@ body {
     text-align: center;
 }
 
+#register-date{
+    color:white;
+    text-align:center;
+}
+
 .filecv {
     display: flex;
     justify-content: center;
@@ -267,4 +272,13 @@ button:hover {
 .deletedbutton {
     display: flex;
     justify-content: center;
+}
+
+#delete_button{
+    background-color: red;
+}
+
+#delete_button:hover{
+    background-color:white;
+    color:red;
 }
