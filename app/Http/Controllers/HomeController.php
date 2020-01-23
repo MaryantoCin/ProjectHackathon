@@ -59,7 +59,7 @@ class HomeController extends Controller
         $useremail = $user->email;
         if ($useremail == "eeo@bncc.net"){
             $messagess = Message::all();
-            // dd($messages);
+             //dd($messagess);
             return view('message',compact('messagess'));
         }
     }
@@ -74,6 +74,13 @@ class HomeController extends Controller
         $datas = Team::find($userid);
         //dd($datas);
         return view('payment',compact('datas','userid','username'));
+    }
+
+    public function verifyPayment(Request $request, Team $team)
+    {
+        $team->update(['payment_status'=>1]);
+        // dd($team);
+        return redirect('/home');
     }
 
     public function edit()
@@ -143,7 +150,7 @@ class HomeController extends Controller
         }
 
         $team->update($data);
-        dd($team);
+        // dd($team);
          
         return redirect('/home');
 

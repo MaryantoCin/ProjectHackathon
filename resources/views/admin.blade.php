@@ -25,7 +25,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="menu-item" href="#">
+                    <a class="menu-item" href="/message">
                         <div class="menu-icon messages"></div>
                         <div class="menu-text">Messages</div>
                     </a>
@@ -167,7 +167,7 @@
                     <div class="cv-wrapper">
                         <div class="cv">
                             <h3 id="payment-status">Payment Status</h3>
-                            @if($data->payment_image == null)
+                            @if($data->payment_status == null)
                             <img src="{{asset('asset/admin/Icon-14.png')}}" alt="" width="250px" height="250px" class="filecv">
                             @else
                             <img src="{{asset('asset/admin/Icon-13.png')}}" alt="" width="250px" height="250px" class="filecv">
@@ -183,6 +183,24 @@
                         <br>
                         @endif
 
+                        @if($data->payment_image !=null && $data->payment_status!=1)
+                            <div class="cv">
+                            <form action="{{route('verify.payment',$data)}}" method="POST" class="deletedbutton">
+                            @csrf
+                            {{ method_field('PUT') }}
+                            <button type="submit">Verify Payment</button>
+                            </form>
+                            </div>
+                        <br>
+                        @endif
+
+                        <div class="cv">
+                            <h3 id="payment-status">Registered On</h3>
+                            <br>
+                            <h5 id="register-date">{{$data->created_at}}</h5>
+                        </div>
+                        <br>
+
                         @if($data->leaderCV != null || $data->member1CV != null || $data->member2CV != null)
                             <div class="cv">
                             <h3 id="payment-status">CV</h3>
@@ -193,18 +211,20 @@
                                     @csrf
                                     <button type="submit">Download Leader CV</button>
                                 </form>
+                                <br>
                                 @endif
                                 @if($data->member1CV != null)
                                 <form action="{{route('download.member1CV',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member1 CV</button>
                                 </form>
+                                <br>
                                 @endif
                                 @if($data->member2CV != null)
                                 <form action="{{route('download.member2CV',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member2 CV</button>
-                                </form>
+                                </form><br>
                                 @endif
                             </div>
                             </div>
@@ -220,19 +240,19 @@
                                 <form action="{{route('download.leaderProject',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Leader Project</button>
-                                </form>
+                                </form><br>
                                 @endif
                                 @if($data->member1Project != null)
                                 <form action="{{route('download.member1Project',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member1 Project</button>
-                                </form>
+                                </form><br>
                                 @endif
                                 @if($data->member2Project != null)
                                 <form action="{{route('download.member2Project',$data)}}" method="GET" class="deletedbutton">
                                     @csrf
                                     <button type="submit">Download Member2 Project</button>
-                                </form>
+                                </form><br>
                                 @endif
                             </div>
                             </div>
@@ -243,7 +263,7 @@
                         <form action="{{route('data.destroy',$data)}}" method="POST" class="deletedbutton">
                             @csrf
                             {{ method_field('DELETE') }}
-                            <button type="submit">Delete Team</button>
+                            <button id="delete_button"type="submit">Delete Team</button>
                         </form>
                         </div>
                     </div> 

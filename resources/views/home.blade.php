@@ -282,6 +282,7 @@
             <div class="contact">
                 
             </div>
+            @if($datas->payment_image==null)
             <div class="line-payment">
                 <h5 id="payment2">Upload Payment Receipt</h5>
                 <form action="{{url('update/'.$datas->id)}}" method="POST" enctype="multipart/form-data">
@@ -290,7 +291,6 @@
                 <div class="uploadpayment">
                     <label for="file-input">
                     <img src="{{asset('asset/home/Icon-10.png')}}" alt="" width="70px" height="70px" class="iconpayment"></label>
-                    <input id="file-input" type="file">
                     <input id="file-input" type="file" name="payment_image">
                 </div>
                 <div class="submitpayment1" id="submitpayment1">
@@ -298,6 +298,7 @@
                 </div>
                 </form>
             </div>
+            @endif
         </div>
     </div>
 </body>

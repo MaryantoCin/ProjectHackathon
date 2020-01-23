@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Muli|Quicksand&display=swap">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> -->
+  
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cookie|Fredoka+One|Indie+Flower|Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -93,7 +93,6 @@
           </a>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -104,7 +103,6 @@
       <div class="modal-title">TEAM</div>
       <form method="POST" action="{{ route('register') }}">
        @csrf
-       <label>Name</label>
        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder ="Group Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
@@ -129,72 +127,6 @@
                                     {{ __('Register') }}
                                 </button>
       </form>
-      <!-- <form action="">
-        <input type="text" class="input-text" placeholder="Group Name">
-        <input type="password" class="input-text" placeholder="Password">
-        <input type="password" class="input-text" placeholder="Repeat Password">
-      </form> -->
-      <!-- <div class="modal-title">LEADER</div>
-      <form action="">
-        <input type="text" class="input-text" placeholder="Full Name">
-        <input type="text" class="input-text" placeholder="Address">
-        <input type="text" class="input-text" placeholder="Birth Place/Date">
-        <input type="text" class="input-text" placeholder="Email">
-        <input type="text" class="input-text" placeholder="Whatsapp Number">
-        <input type="text" class="input-text" placeholder="Line ID">
-        <input type="text" class="input-text" placeholder="GitHub ID">
-        <input type="file" id="file">
-        <label for="file" class="input-text">
-          Upload CV
-          <i class="fas fa-file-upload"></i>
-        </label>
-        <input type="file" id="file">
-        <label for="file" class="input-text">
-          Upload Project
-          <i class="fas fa-file-upload"></i>
-        </label>
-      </form>
-      <div class="modal-title">MEMBER 1</div>
-      <form action="">
-        <input type="text" class="input-text" placeholder="Full Name">
-        <input type="text" class="input-text" placeholder="Address">
-        <input type="text" class="input-text" placeholder="Birth Place/Date">
-        <input type="text" class="input-text" placeholder="Email">
-        <input type="text" class="input-text" placeholder="Whatsapp Number">
-        <input type="text" class="input-text" placeholder="Line ID">
-        <input type="text" class="input-text" placeholder="GitHub ID">
-        <input type="file" id="file">
-        <label for="file" class="input-text">
-          Upload CV
-          <i class="fas fa-file-upload"></i>
-        </label>
-        <input type="file" id="file">
-        <label for="file" class="input-text">
-          Upload Project
-          <i class="fas fa-file-upload"></i>
-        </label>
-      </form>
-      <div class="modal-title">MEMBER 2</div>
-      <form action="">
-        <input type="text" class="input-text" placeholder="Full Name">
-        <input type="text" class="input-text" placeholder="Address">
-        <input type="text" class="input-text" placeholder="Birth Place/Date">
-        <input type="text" class="input-text" placeholder="Email">
-        <input type="text" class="input-text" placeholder="Whatsapp Number">
-        <input type="text" class="input-text" placeholder="Line ID">
-        <input type="text" class="input-text" placeholder="GitHub ID">
-        <input type="file" id="file">
-        <label for="file" class="input-text">
-          Upload CV
-          <i class="fas fa-file-upload"></i>
-        </label>
-        <input type="file" id="file">
-        <label for="file" class="input-text">
-          Upload Project
-          <i class="fas fa-file-upload"></i>
-        </label>
-        <button class="form-button" type="submit">Register</button>
-      </form> -->
     </div>
   </div>
   
@@ -220,12 +152,6 @@
                                     {{ __('Login') }}
                                 </button>
       </form>
-      <!-- <form action="">
-        <div class="form-error">Error! Please try again!</div>
-        <input type="text" class="input-text" placeholder="Group Name">
-        <input type="password" class="input-text" placeholder="Password">
-        <button class="form-button" type="submit">Login</button>
-      </form> -->
     </div>
   </div>
 
@@ -477,19 +403,19 @@
   @csrf
   <div class="contact-form">
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Name" name="name">
+      <input type="text" class="input" placeholder="Name" name="name" required>
       <i class="fas fa-user"></i>
     </div>
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Email" name="email">
+      <input type="text" class="input" placeholder="Email" name="email" required>
       <i class="fas fa-envelope"></i>
     </div>
     <div class="contact-form-items">
-      <input type="text" class="input" placeholder="Subject" name="subject">
+      <input type="text" class="input" placeholder="Subject" name="subject" required>
       <i class="fas fa-file"></i>
     </div>
     <div class="contact-form-items">
-      <textarea class="input message" cols="30" rows="10" placeholder="Message....." name="message"></textarea>
+      <textarea class="input message" cols="30" rows="10" placeholder="Message....." name="message" required></textarea>
     </div>
   </div>
   <button class="btn" type="submit">
@@ -502,17 +428,17 @@
 
   <div class="social-icons">
     <div class="facebook">
-      <a href="https://www.facebook.com/bina.nusantara.computer.club" class="facebook">
+      <a href="https://www.facebook.com/bina.nusantara.computer.club" target="_blank" class="facebook">
       <i class="fab fa-facebook-f"></i>
     </a>
     </div>
     <div class="line">
-      <a href="http://line.me/ti/p/~@joy0117j" class="line">
+      <a href="http://line.me/ti/p/~@joy0117j" target="_blank" class="line">
       <i class="fab fa-line"></i>
       </a>
     </div>
     <div class="instagram">
-    <a href="https://www.instagram.com/technoeventbncc" class="instagram">
+    <a href="https://www.instagram.com/technoeventbncc" target="_blank" class="instagram">
       <i class="fab fa-instagram"></i>
     </a>
   </div>
@@ -539,9 +465,10 @@
 </div>
 
 
-  <script type="text/javascript" src="{{asset('asset/welcome/main.js')}}"></script>
+  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="{{asset('asset/welcome/main.js')}}"></script>
   <!-- Atas adalah untuk FAQ -->
 
 </body>

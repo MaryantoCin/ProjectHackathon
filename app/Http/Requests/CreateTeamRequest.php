@@ -50,7 +50,8 @@ class CreateTeamRequest extends FormRequest
             "member1CV" => 'nullable|file|max:4096',
             "member1Project" => 'nullable|file|max:20480',
             "member2CV" => 'nullable|file|max:4096',
-            "member2Project" => 'nullable|file|max:20480'
+            "member2Project" => 'nullable|file|max:20480',
+            "payment_status" => 'required'
         ];
     }
 }

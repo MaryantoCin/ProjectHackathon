@@ -23,6 +23,7 @@ html, body {
   max-width: 1300px;
   padding: 0 32px;
   margin: 0 auto;
+  /* background-color: red; */
 }
 
 .header {
@@ -352,6 +353,7 @@ input[type="file"] {
 
 .about-us-wrapper {
   background-image: url(Back\ alter-44.png);
+  /* background-color: red; */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -362,7 +364,7 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   padding: 32px;
-  background-image: url(Back\ alter-44.png);
+  background-image: url(Back\ alter-44.png); 
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

@@ -285,7 +285,8 @@ html, body {
 }
 
 input[type="file"] {
-  display: none;
+  /*padding-left: 60%;*/
+  
   font-family: 'muli', sans-serif;
 }
 

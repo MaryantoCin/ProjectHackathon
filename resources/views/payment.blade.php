@@ -67,6 +67,7 @@
                     </p>
                 </div>
                 <div>
+                    @if($datas->payment_status==null)
                     <div id="notverified">
                         <h3>You haven't done any payment!</h3>
                     </div>
@@ -77,7 +78,15 @@
                             to upload your payment receipt and
                             see the deadline payment 
                             <a href="/home"><i id="hyperlink">here</i></a>
-
+                    @else
+                    <div id="verified">
+                        <h3>Your payment has been verified!</h3>
+                    </div>
+                    <div id="infopayment">
+                        <p>You have been registered for Hackathon. Stay tuned for more updates.</i>
+                        </p>
+                    </div>
+                    @endif
                         </p>
                     </div>
                 </div>

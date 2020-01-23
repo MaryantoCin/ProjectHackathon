@@ -19,7 +19,7 @@
             </div> <br>
             <ul class="menu">
                 <li>
-                    <a class="menu-item" href="#">
+                    <a class="menu-item" href="/home">
                         <div class="menu-icon home"></div>
                         <div class="menu-text">Home</div>
                     </a>
@@ -75,7 +75,7 @@
                         <h2 id="member">Message</h2>
                         <div class="line-data">
                             <div class="content-data">
-                                <div class="subcontent-data">{{$messages->message}}</div>
+                                <div class="subcontent-data">{{$messages['message']}}</div>
                             </div>
                         </div>
                     </div>
@@ -90,11 +90,13 @@
                     </div> 
                     
                 </div>
+                <br>
+                @endforeach
             </div> 
        
-            <br>
             
-            @endforeach
+            
+            
             
         </div>
     </div>
