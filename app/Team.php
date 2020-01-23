@@ -36,6 +36,7 @@ class Team extends Model
         "member2CV",
         "member2Project",
         "payment_image",
-        "payment_status"
+        "payment_status",
+        "teamname"
     ];
 }

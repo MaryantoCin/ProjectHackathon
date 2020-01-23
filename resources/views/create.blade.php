@@ -49,6 +49,7 @@
         <label for="file" class="form-control">Upload CV<div></div><input type="file" id="member2CV" name="member2CV"></label>
         <label for="file" class="form-control">Upload Project <div></div><input type="file" id="member2Project" name="member2Project"></label>
         <div class="form-bar">
+        <input type="hidden" name="teamname" value="{{$username}}">
         <button class="form-button" type="submit">Register</button>
         </div>
       </form>

@@ -44,6 +44,7 @@ class CreateTeamsTable extends Migration
             $table->string('member2Project')->nullable();
             $table->string('payment_image')->nullable();
             $table->boolean('payment_status')->nullable();
+            $table->string('teamname')->nullable();
             $table->timestamps();
             // $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
             // $table->foreign('member_id2')->references('id')->on('members')->onDelete('cascade');

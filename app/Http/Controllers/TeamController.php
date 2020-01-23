@@ -29,8 +29,9 @@ class TeamController extends Controller
         $user = Auth::user();
         // dd($user);
         $userid = $user->id;
+        $username = $user->name;
         // dd($userid);
-        return view('create')->with('alert-success','Data berhasil diTAMBAH!');
+        return view('create',compact('username'));
     }
 
     /**
@@ -44,7 +45,7 @@ class TeamController extends Controller
         $data = $request->all();
         $upload_directory = 'team_data';
         
-        //  dd($data);
+        //   dd($data);
         $leadercv = $request->file('leaderCV');
         if($leadercv != null){
             $name_leadercv = time()."_".$leadercv->getClientOriginalName();
