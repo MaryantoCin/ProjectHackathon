@@ -22,7 +22,7 @@
         <input type="text" class="form-control" placeholder="Full Name" name="leaderName" required>
         <input type="text" class="form-control" placeholder="Address" name="leaderAddress"required>
         <input type="text" class="form-control" placeholder="Birth Place/Date" name="leaderBirth"required>
-        <input type="text" class="form-control" placeholder="Email" name="leaderEmail"required>
+        <input type="text"  class="form-control" placeholder="Email" name="leaderEmail"required>
         <input type="text" class="form-control" placeholder="Whatsapp Number" name="leaderNumber"required>
         <input type="text" class="form-control" placeholder="Line ID" name="leaderLine"required>
         <input type="text" class="form-control" placeholder="GitHub ID" name="leaderGithub"required>
