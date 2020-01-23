@@ -103,7 +103,6 @@
       <div class="modal-title">TEAM</div>
       <form method="POST" action="{{ route('register') }}">
        @csrf
-       <label>Name</label>
        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder ="Group Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
@@ -429,17 +428,17 @@
 
   <div class="social-icons">
     <div class="facebook">
-      <a href="https://www.facebook.com/bina.nusantara.computer.club" class="facebook">
+      <a href="https://www.facebook.com/bina.nusantara.computer.club" target="_blank" class="facebook">
       <i class="fab fa-facebook-f"></i>
     </a>
     </div>
     <div class="line">
-      <a href="http://line.me/ti/p/~@joy0117j" class="line">
+      <a href="http://line.me/ti/p/~@joy0117j" target="_blank" class="line">
       <i class="fab fa-line"></i>
       </a>
     </div>
     <div class="instagram">
-    <a href="https://www.instagram.com/technoeventbncc" class="instagram">
+    <a href="https://www.instagram.com/technoeventbncc" target="_blank" class="instagram">
       <i class="fab fa-instagram"></i>
     </a>
   </div>
