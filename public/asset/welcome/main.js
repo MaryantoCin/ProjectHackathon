@@ -82,7 +82,7 @@ $(document).ready(function(){
   $('.about-us-carousel').slick({
     dots: true,
     infinite: true,
-    speed: 700,
+    speed: 500,
     fade: true,
     cssEase: 'linear',
     autoplay: true,
