@@ -450,9 +450,9 @@
   </div>
 </div>
 
-  <div class="contactus-img">
+  <!-- <div class="contactus-img">
     <img src="{{asset('asset/welcome/contact.png')}}" alt="">
-  </div>
+  </div> -->
   
 </div>
 
