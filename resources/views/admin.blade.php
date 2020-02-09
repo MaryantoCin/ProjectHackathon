@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="sidebar-container">
-            <a class="logo" href="index.html">
+            <a class="logo" href="/">
                 <img src="{{asset('asset/admin/hackathon.png')}}" alt="logo">
             </a>
             <div class="welcome-container">

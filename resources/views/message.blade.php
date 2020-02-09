@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="sidebar-container">
-            <a class="logo" href="index.html">
+            <a class="logo" href="/">
                 <img src="{{asset('asset/admin/hackathon.png')}}" alt="logo">
             </a>
             <div class="welcome-container">
@@ -34,15 +34,16 @@
                 <a class="menu-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        <div class="menu-icon logout"></div>
+                    <div class="menu-icon logout"></div>
                                         {{ __('Logout') }}
-                                    </a>
+                </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                 </a>
                 </li>
+                
             </ul>
             <div class="copyright-container">
                 &copy;2019 by Bina Nusantara Computer Club

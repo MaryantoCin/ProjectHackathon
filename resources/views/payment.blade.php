@@ -44,7 +44,22 @@
                                     </form>
                 </a>
                 </li>
+                <div class="timeline-dashboard">
+                <h3>
+                    TIMELINE
+                </h3>
+                <h4>
+                    Payment Deadline : 09 June 2020
+                </h4>
+                <h4>
+                    Technical Meeting : 10 June 2020
+                </h4>
+                <h4>
+                    Hackathon : 26-28 June 2020
+                </h4>
+            </div>
             </ul>
+            
             <div class="copyright-container">
                 &copy;2019 by Bina Nusantara Computer Club
             </div>

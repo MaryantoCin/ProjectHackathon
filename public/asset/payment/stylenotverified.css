@@ -251,3 +251,21 @@ body {
     margin-bottom: 7px;
 }
 
+.timeline-dashboard {
+    color: white;
+    font-size: 15px;
+    border: 1px solid pink;
+    border-radius: 20px;
+    margin-left : 20px;
+    margin-right: 20px;
+    margin-top: 70px;
+    padding: 20px;
+}
+
+.timeline-dashboard h4 {
+    text-align: center;
+}
+
+.timeline-dashboard h3 {
+    text-align: center;
+}
